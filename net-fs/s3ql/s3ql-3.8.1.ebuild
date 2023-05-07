@@ -37,7 +37,7 @@ BDEPEND="${RDEPEND}
 RESTRICT="test"
 
 PATCHES=(
-	"${FILESDIR}"/3.8.1-fix-build-python-3.11-drop-unused-deltadump-extension.patch
+	"${FILESDIR}"/3.8.1-fix-build-python-3.11.patch
 )
 
 python_test() {
