@@ -3,6 +3,8 @@
 
 EAPI=8
 
+DISTUTILS_EXT=1
+DISTUTILS_USE_PEP517=setuptools
 PYTHON_COMPAT=( python3_{10..13} )
 
 inherit distutils-r1
@@ -35,7 +37,7 @@ BDEPEND="${RDEPEND}
 
 RESTRICT="test"
 
-python_prepare() {
+python_configure() {
 	esetup.py build_cython
 }
 
