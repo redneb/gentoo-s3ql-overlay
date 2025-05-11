@@ -37,6 +37,11 @@ BDEPEND="${RDEPEND}
 
 RESTRICT="test"
 
+src_prepare() {
+	rm -f "${S}"/pyproject.toml || die 'Failed to remove pyproject.toml'
+	default
+}
+
 python_configure() {
 	esetup.py build_cython
 }
